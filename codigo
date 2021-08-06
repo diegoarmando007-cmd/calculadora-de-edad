@@ -1,0 +1,51 @@
+package jop;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Period;
+import java.util.Scanner;
+
+public class NewClass1 {
+
+public static void main(String[] args){
+
+    Scanner ip = new Scanner(System.in);
+    LocalDate cr = LocalDate.now();
+
+    int y,m,d;
+    
+    System.out.println("**CALCULADORA DE EDAD**");
+    
+    System.out.println("Incresa año,mes y dia");
+    
+     y = ip.nextInt();
+    
+     if(y > 2021){
+    System.out.println("Todavia no llegamos a ese año");
+    
+    
+     }
+     
+     m = ip.nextInt();
+     
+     if(m > 12){
+    System.out.println("Increse un numero de mes menor a 12");
+    
+    
+     }
+     
+     d = ip.nextInt();
+    
+     
+     if(d > 31){
+    System.out.println("Increse un dia menor a 30");
+    
+    
+     }
+    
+    LocalDate bd = LocalDate.of(y,m,d);
+    int agey = Period.between(bd, cr).getYears();
+    System.out.println("Tu edad es; " + agey);
+}    
+
+}
